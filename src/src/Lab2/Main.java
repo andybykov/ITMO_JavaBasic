@@ -37,30 +37,28 @@ public class Main {
         System.out.println(calc.divide(c, zero));
     }
 
-    // Задание 3
+    // Задание 2
     public static void printPersonTest(){
         // вызов конструктора без параметров
         Person andy = new Person();
-        System.out.println(andy.firstName);
-        System.out.println(andy.lastName);
-        System.out.println(andy.age);
-        System.out.println(andy.phoneNo);
+        andy.setAge(36);
+        andy.setFirstName("Андрей");
+        andy.setLastName("Б");
+        andy.setPhoneNo(987654321);
+        System.out.println(andy.toString());
         System.out.println("\n");
 
         // вызов конструктора с некторыми параметрами
         Person vasya = new Person("Василий", 35);
-        System.out.println(vasya.firstName);
-        System.out.println(vasya.lastName);
-        System.out.println(vasya.age);
-        System.out.println(vasya.phoneNo);
-        System.out.println("\n");
+          System.out.println(vasya.getFirstName());
+          System.out.println(vasya.getAge());
+          System.out.println("\n");
 
         // вызов конструктора со всеми параметрами
         Person adam = new Person("Адам", "Адамович", 40, 1234567890);
-        System.out.println(adam.firstName);
-        System.out.println(adam.lastName);
-        System.out.println(adam.age);
-        System.out.println(adam.phoneNo);
+        System.out.println(adam.getFullName());
+        System.out.println(adam.getAge());
+        System.out.println(adam.getPhoneNo());
         System.out.println("\n");
     }
 
