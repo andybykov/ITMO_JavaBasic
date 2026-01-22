@@ -42,20 +42,20 @@ public class Calculator {
     }
 
     // деление
-    public int divide(int a, int b) {
+    public double divide(int a, int b) {
         if (b == 0) {
             System.out.println("Division by zero error");
             return 0;
         }
-        return a / b;
+        return (double) (a) / b; // только один операнд - автоматом все приводится к дабл
     }
 
-    public long divide(long a, long b) {
+    public double divide(long a, long b) {
         if (b == 0) {
             System.out.println("Division by zero error");
             return 0;
         }
-        return a / b;
+        return (double)(a) / b;
     }
 
     public double divide(double a, double b) {
