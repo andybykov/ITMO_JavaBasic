@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class PrintNumbers {
 
     // выводит на консоль нечетные числа от 1 до 99.
-    public static void exercise1() {
+    public static void printOddNumbers() {
         for (int i = 0; i < 100; ++i) {
             System.out.println(i);
         }
     }
 
     // выводит числа от 1 до 100, которые делятся на 3, 5 и на то и другое (то есть и на 3 и на 5)
-    public static void exercise2() {
+    public static void printDivisionCheck() {
         for (int i = 1; i <= 100; ++i) {
             if (i % 3 == 0) {
                 System.out.println("Делится на 3: " + i);
@@ -27,7 +27,7 @@ public class PrintNumbers {
     }
 
     // вычислить сумму двух целых чисел и вернуть true, если сумма равна третьему целому числу
-    public static void exercise3() {
+    public static boolean printSum() {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите первое число: ");
         int inputA = in.nextInt();
@@ -36,12 +36,14 @@ public class PrintNumbers {
         System.out.println("Введите третье число: ");
         int inputC = in.nextInt();
         boolean isValidSum = (inputA + inputB) == inputC;
-        System.out.println("Результат: " + isValidSum);
+        //System.out.println("Результат: " + isValidSum);
+
+        return isValidSum;
     }
 
     // принимает три целых числа и возвращает true, если второе число больше первого числа,
     // а третье число больше второго числа
-    public static void exercise4() {
+    public static boolean printLargesNum() {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите первое число: ");
         int inputA = in.nextInt();
@@ -49,12 +51,14 @@ public class PrintNumbers {
         int inputB = in.nextInt();
         System.out.println("Введите третье число: ");
         int inputC = in.nextInt();
-        boolean chek = (inputA < inputB) && (inputC > inputB);
-        System.out.println("Результат: " + chek);
+
+        return (inputA < inputB) && (inputC > inputB);
+        //System.out.println("Результат: " + chek);
+
     }
 
     // есть ли 3 как первый или последний элемент массива целых чисел
-    public static void exercise5() {
+    public static boolean threeFirstOrLast() {
         Scanner scanner = new Scanner(System.in);
         int arrLength = 0;
         while (true) {
@@ -85,11 +89,12 @@ public class PrintNumbers {
             System.out.print(a + " ");
         }
         System.out.println();
-        System.out.println(chek);
+        //System.out.println(chek);
+        return chek;
     }
 
-    //проверка, что массив содержит число 1 или 3
-    public static void exercise6() {
+    // проверка, что массив содержит число 1 или 3
+    public static boolean oneOrThreeContains() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите длину массива: ");
         int arrLength = scanner.nextInt();
@@ -97,7 +102,7 @@ public class PrintNumbers {
 
         if (arrLength <= 0) {
             System.out.println("Длина не может быть 0 и меньше!");
-            return;
+            return false;
         }
         int[] array = new int[arrLength];
 
@@ -115,9 +120,6 @@ public class PrintNumbers {
                 break; // если нашли хотябы одно выходим
             }
         }
-        if (chek) {
-            System.out.println("Массив содержит число 1 или 3");
-        }
-        System.out.println("Массив НЕ содержит чисел 1 или 3");
+        return chek;
     }
 }
