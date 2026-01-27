@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="159a7379-3bc8-4312-bb13-c069c16d8c4d" name="Changes" comment="init commit">
+    <list default="true" id="159a7379-3bc8-4312-bb13-c069c16d8c4d" name="Changes" comment="Lab 4: complete part 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Lab4/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +36,12 @@
     "accountId": "98be8d77-f1ab-47b6-bd63-7f288b3c4426"
   }
 }]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/src/Lab4/part2/Sort.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 1
 }]]></component>
@@ -57,7 +62,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "proofread"
   }
 }]]></component>
   <component name="RunManager">
@@ -96,12 +101,37 @@
       <option name="project" value="LOCAL" />
       <updated>1769328272221</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lab 4: complete part 1">
+      <option name="closed" value="true" />
+      <created>1769329607608</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769329607608</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Lab 4: complete part 1">
+      <option name="closed" value="true" />
+      <created>1769329616285</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769329616285</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Lab 4: complete part 1">
+      <option name="closed" value="true" />
+      <created>1769329726378</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1769329726378</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+    <MESSAGE value="Lab 4: complete part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab 4: complete part 1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
