@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="159a7379-3bc8-4312-bb13-c069c16d8c4d" name="Changes" comment="Lab 4: complete part 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Lab4/part1/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Lab4/part1/PrintNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Lab4/part1/PrintNumbers.java" afterDir="false" />
+    <list default="true" id="159a7379-3bc8-4312-bb13-c069c16d8c4d" name="Changes" comment="Lab 4: edit part 1, complete part 2">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,14 +133,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769511713791</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Lab 4: edit part 1, complete part 2">
+      <option name="closed" value="true" />
+      <created>1769513394591</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1769513394592</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
     <MESSAGE value="Lab 4: complete part 1" />
     <MESSAGE value="Lab 4: complete part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab 4: complete part 2" />
+    <MESSAGE value="Lab 4: edit part 1, complete part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab 4: edit part 1, complete part 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
