@@ -13,7 +13,8 @@ public class Main {
         int[] array1 = PrintAndSortArrays.fill(3); // создаем и заполняем массив
         System.out.println(PrintAndSortArrays.chekSumOfThree(array1));
         // 4
-        int[] array2 = PrintAndSortArrays.fill(3); // создаем и заполняем массив         System.out.println(PrintAndSortArrays.chekLargesNumber(array2));
+        int[] array2 = PrintAndSortArrays.fill(3); // создаем и заполняем массив
+        System.out.println(PrintAndSortArrays.chekLargesNumber(array2));
         // 5
         int[] array3 = new int[] { 3, -3, 7, 4, 5, 4, 3};
         PrintAndSortArrays.print(array3);

@@ -31,9 +31,21 @@ public class TextInstruments {
         return this.text.split("[\\s\\p{Punct}]+");
     }
 
+    public String[] separateWords(String inputText) {
+        // проверка
+        if (inputText == null || inputText.isEmpty()) {
+            return new String[0];
+        }
+        //String[] words = text.split("\\s*(\\s|,|!|\\.)\\s*");
+        return inputText.split("[\\s\\p{Punct}]+");
+    }
+
     // Задание 1: метод для поиска самого длинного слова в тексте.
     //  Ищет самое длинное слово
-    public String findLongerWord() {
+    public String findLongerWord(String inputText) {
+        if(inputText.isEmpty()){
+            return "";
+        }
         String[] words = this.separateWords();
         // проверка
         if (words.length == 0) {
@@ -67,9 +79,9 @@ public class TextInstruments {
 
     // Задание 3. метод, заменяющий в тексте все вхождения слова <word> на <censored>
     // без учета регистра
-    public String censored(String word, String censored) {
+    public String censored(String inputText, String word, String censored) {
         // проверка
-        if (this.text == null || this.text.isEmpty() ||
+        if (inputText == null || inputText.isEmpty() ||
                 word == null || word.isEmpty() || censored == null) {
             return "";
         }
@@ -77,7 +89,7 @@ public class TextInstruments {
         // к нижнему регистру
         String wordLower = word.toLowerCase();
 
-        StringBuilder sb = new StringBuilder(this.text);
+        StringBuilder sb = new StringBuilder(inputText);
         String tmpTxt = sb.toString().toLowerCase();
 
         int lenWord = word.length();
@@ -98,7 +110,7 @@ public class TextInstruments {
             // после замены обновляем копию
             tmpTxt = sb.toString().toLowerCase();
 
-            // сдывиг позиции
+            // сдвиг позиции
             searchIdx += censored.length();
 
             // проверка выхода за границу строки
@@ -111,15 +123,15 @@ public class TextInstruments {
     }
 
     // Задание 4. Подсчет количества вхождений одной подстроки в другую.
-    public int countStrOfSubstr(String substr) {
+    public int countStrOfSubstr(String text, String substr) {
         // проверка
-        if (this.text == null || this.text.isEmpty() ||
+        if (text == null || text.isEmpty() ||
                 substr == null || substr.isEmpty()) {
             return 0;
         }
         // в нижний регистр
         substr = substr.toLowerCase();
-        String text = this.text.toLowerCase();
+        text = text.toLowerCase();
 
         // счетчики
         int count = 0;
@@ -141,12 +153,12 @@ public class TextInstruments {
     }
 
     // Задание 5. Метод, который инвертирует слова в строке.
-    public String invertSrting() {
+    public String invertString(String inputText) {
         // проверка
-        if (this.text == null || this.text.isEmpty()) {
+        if (inputText == null || inputText.isEmpty()) {
             return "";
         }
-        String[] words =  this.separateWords(); // разделяем на слова
+        String[] words = this.separateWords(inputText); // разделяем на слова
 
         StringBuilder result = new StringBuilder();
 
