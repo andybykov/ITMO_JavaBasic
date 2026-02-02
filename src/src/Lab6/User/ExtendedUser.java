@@ -1,50 +1,41 @@
 package Lab6.User;
 
 public class ExtendedUser extends BasicUser{
-    private String userLastName;
+    private String userName;
 
     // Конструкторы
-    public ExtendedUser(String userName, String userLastName, int userAge) {
-        super(userName, userAge);
-        this.userLastName = this.setUserLastName(userLastName);
+    public ExtendedUser(int userAge, String userName) {
+        super(userAge);
+        this.userName = this.setUserName(userName);
     }
 
     public ExtendedUser(){
         super();
-        this.userLastName = this.setUserLastName("");
+        this.userName = this.setUserName("");
     }
-
 
     // Геттер
-    public String getUserLastName() {
-        return userLastName;
-    }
-
-    public String getFullName() {
-        return super.getUserName() + " " + getUserLastName();
+    public String getUserName() {
+        return this.userName;
     }
 
     // Сеттер
-    public String setUserLastName(String lastName) {
-        if (lastName.isEmpty()) {
-            this.userLastName = "Бесфамильный";
+    public String setUserName(String name) {
+        if (name.isEmpty()) {
+            this.userName = "Безымянный";
         } else {
-            this.userLastName = lastName;
+            this.userName = name;
         }
 
-        return this.userLastName;
+        return this.userName;
     }
 
-    // Переопределенный метод для получения имени пользователя
+    // Переопределенный метод для вывода имени пользователя
     @Override
-    public String enterUserName() {
-       super.enterUserName();
-        // + ввод фамилии
-        System.out.print("Введите фамилию: ");
-        String lastName = scanner.nextLine();
-        setUserLastName(lastName);
-
-        // полное имя
-        return getFullName();
+    public void enterAndPrintUserInfo() {
+        super.enterAndPrintUserInfo(); // надо ли вызывать??
+        System.out.println("Введите имя: ");
+        this.userName = scanner.nextLine();
+        System.out.println("Имя пользователя: " + this.userName);
     }
 }
