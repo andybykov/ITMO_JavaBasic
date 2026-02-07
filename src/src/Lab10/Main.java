@@ -21,6 +21,9 @@ public class Main {
             String inputPath2 = "files/input_text2.txt";
             FileInstruments.mergeFiles(inputPath1, inputPath2, outputPath);
 
+            //4.
+            FileInstruments.replaceSomeSymbols(outputPath);
+
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }

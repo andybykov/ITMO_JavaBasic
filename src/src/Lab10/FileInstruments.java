@@ -8,7 +8,7 @@ public class FileInstruments {
 
     //Задание 1. метод, который читает текстовый файл и возвращает его в виде списка строк.
     public static List<String> readFileToListString(String inputPath) {
-        if (inputPath== null || inputPath.isEmpty()) {
+        if (inputPath == null || inputPath.isEmpty()) {
             throw new IllegalArgumentException("Null or empty path to file");
         }
 
@@ -51,7 +51,7 @@ public class FileInstruments {
      */
     public static void mergeFiles(String inputPath1, String inputPath2, String outputPath) {
         if ((inputPath1 == null || inputPath1.isEmpty())
-                || (inputPath2== null || inputPath2.isEmpty())
+                || (inputPath2 == null || inputPath2.isEmpty())
                 || (outputPath == null || outputPath.isEmpty())) {
             throw new IllegalArgumentException("Null or empty arguments");
         }
@@ -66,7 +66,38 @@ public class FileInstruments {
         for (String line : file2Lines) {
             writeStringToFile(outputPath, line, true);
         }
+    }
 
+    // Задание 4. метод который заменяет в файле все кроме букв и цифр на знак ‘$’
+    public static void replaceSomeSymbols(String inputPath) {
+        if (inputPath == null || inputPath.isEmpty()) {
+            throw new IllegalArgumentException("Null or empty file path");
+        }
+        // читаем файл
+        List<String> lines = readFileToListString(inputPath);
+
+        if (lines.isEmpty()) {
+            return; // ничего нет
+        }
+        // для результата
+        List<String> resultLines = new ArrayList<>();
+
+        for (String line : lines) {
+            String tmpLine = line.replaceAll("[^A-Za-z0-9-А-Яа-я]", "\\$");
+            resultLines.add(tmpLine); // после regex
+        }
+
+        // обратно записываем в файл
+        for (int i = 0; i < resultLines.size(); i++) {
+            // первая строка с перезаписью файла
+            if(i == 0) {
+                writeStringToFile(inputPath, resultLines.get(i), false);
+                continue;
+            }
+            writeStringToFile(inputPath, resultLines.get(i), true);
+        }
     }
 }
+
+
 
